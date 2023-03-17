@@ -8,25 +8,44 @@
   </head>
   <body>
     <main id="root">
-      <section id="hangman">
-        <svg height="250" width="250" class="hangman-figure">
-          <!-- guillotine -->+
-          <line x1="60" y1="20" x2="140" y2="20" />
-          <line x1="140" y1="20" x2="140" y2="50" />
-          <line x1="60" y1="20" x2="60" y2="230" />
-          <line x1="20" y1="230" x2="100" y2="230" />
+      <section class="main-section">
+        <div id="hangman">
+          <svg height="250" width="250" class="hangman-figure">
+            <!-- guillotine -->+
+            <line x1="60" y1="20" x2="140" y2="20" />
+            <line x1="140" y1="20" x2="140" y2="50" />
+            <line x1="60" y1="20" x2="60" y2="230" />
+            <line x1="20" y1="230" x2="100" y2="230" />
 
-          <!-- head  -->
-          <circle cx="140" cy="70" r="20" />
-          <!-- body -->
-          <line x1="140" y1="90" x2="140" y2="150" />
-          <!-- arms -->
-          <line x1="140" y1="100" x2="120" y2="130" />
-          <line x1="140" y1="100" x2="160" y2="130" />
-          <!-- legs -->
-          <line x1="140" y1="150" x2="120" y2="180" />
-          <line x1="140" y1="150" x2="160" y2="180" />
-        </svg>
+            <!-- head  -->
+            <circle cx="140" cy="70" r="20" class="hangman-part" />
+            <!-- body -->
+            <line x1="140" y1="90" x2="140" y2="150" class="hangman-part" />
+            <!-- arms -->
+            <line x1="140" y1="100" x2="120" y2="130" class="hangman-part" />
+            <line x1="140" y1="100" x2="160" y2="130" class="hangman-part" />
+            <!-- legs -->
+            <line x1="140" y1="150" x2="120" y2="180" class="hangman-part" />
+            <line x1="140" y1="150" x2="160" y2="180" class="hangman-part" />
+          </svg>
+        </div>
+        <div>
+          <h2>Wrong letters</h2>
+          <ul id="wrong-letters-list"></ul>
+        </div>
+      </section>
+      <section id="spaces"></section>
+      <section id="guessing-area">
+        <label for="letter-guess">
+          <span>Siguiente letra</span>
+          <input
+            type="text"
+            maxlength="1"
+            placeholder="Ejemplo: F"
+            id="letter-guess"
+          />
+        </label>
+        <button id="guess-button">Adivinar</button>
       </section>
     </main>
     <script type="module" src="/main.js"></script>

@@ -1,5 +1,66 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .hangman-figure {
   stroke: black;
   stroke-width: 4px;
   stroke-linecap: round;
+}
+
+.word-letters {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 4rem;
+}
+
+.word-letters span {
+  color: slategray;
+}
+
+.hangman-part {
+  display: none;
+}
+
+.word-letters__letter {
+  border-bottom: 1px solid black;
+  min-width: 50px;
+  text-align: center;
+}
+
+.main-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+#guessing-area {
+  display: grid;
+  gap: 0.5rem;
+}
+#guessing-area > button {
+  width: fit-content;
+}
+#guessing-area > label {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+#guessing-area > label span {
+  font-weight: bold;
+  color: cornflowerblue;
+  font-size: 14px;
+}
+
+#guessing-area > label input {
+  border-radius: 0.25rem;
+  outline: none;
+  border: 1px solid lightslategray;
+  padding: 0.25rem 0.5rem;
 }
